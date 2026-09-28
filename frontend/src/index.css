@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(1200px 600px at 50% -10%, #1c1630 0%, #0a0a0f 55%);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2f2f40;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.progress-track {
+  background: #1c1c28;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #7c5cff, #9b82ff);
+  transition: width 0.3s ease;
+}
+
+.card {
+  @apply bg-base-900/80 border border-white/5 rounded-2xl backdrop-blur-sm;
+}
+
+.fade-in {
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
